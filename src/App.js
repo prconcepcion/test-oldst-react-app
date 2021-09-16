@@ -4,7 +4,7 @@ function App() {
   return (
     <div className='App'>
       <header>
-          <h1>Products Grid</h1>
+          <h1>EMOJI SHOP</h1>
 
           {/* <p>But first, a word from our sponsors:</p>
           <img
