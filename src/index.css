@@ -12,8 +12,20 @@ code {
     monospace;
 }
 
-.grid {
+.product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 12px;
+}
+
+.product-details {
+  min-height: 200px;
+  text-align: center;
+  padding-top: 50px;
+  margin: 30px;
+  transition: transform .2s;
+}
+
+.product-details:hover {
+  transform: scale(1.5);
 }
