@@ -5,7 +5,6 @@ function App() {
     <div className='App'>
       <header>
           <h1>EMOJI SHOP</h1>
-
           {/* <p>But first, a word from our sponsors:</p>
           <img
             className='ad'

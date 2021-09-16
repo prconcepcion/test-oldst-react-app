@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 const useFetch = (url) => {
-    const [products, setProducts] = useState(null)
-    const [error, setError] = useState(null)
-    const [loading, setLoading] = useState(true)
+    const [products, setProducts] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch(url)

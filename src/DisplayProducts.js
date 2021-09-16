@@ -1,4 +1,5 @@
-import { useState } from "react/cjs/react.development";
+import { useState, useEffect } from "react/cjs/react.development";
+import useFetch from "./useFetch";
 
 const DisplayProducts = ({products}) => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -16,7 +17,6 @@ const DisplayProducts = ({products}) => {
         return months[newDate.getMonth()] + " " + newDate.getDate() + ", " + newDate.getFullYear()
     }
 
-    console.log(products)
     return (
         <div className="product-list">
             {products.map((product) => (
