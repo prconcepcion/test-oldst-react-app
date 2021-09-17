@@ -38,10 +38,15 @@ code {
 }
 
 .loading {
+  text-align:center; 
+  vertical-align: middle;
+  width: 100%; 
+}
+
+.loading p {
   animation: rotate 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  width: 100px;
 }
 
 .endMessage {

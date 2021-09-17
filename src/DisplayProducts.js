@@ -1,8 +1,12 @@
-import { useState, useEffect } from "react/cjs/react.development";
-import useFetch from "./useFetch";
+import { useState } from "react/cjs/react.development";
 
 const DisplayProducts = ({products}) => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var i = 0;
+
+    const setCounter = (i) => {
+        console.log(i)
+    }
 
     const dateFormat = (date) => {
         const productDate = new Date(date);
@@ -25,8 +29,10 @@ const DisplayProducts = ({products}) => {
                     <h5>Size: { product.size }px</h5>
                     <h5>Price: ${ product.price / 100 }</h5>
                     { (dateFormat(product.date)) > 7 && <h5>Date added: { betterDate(product.date) }</h5> } 
-                    { (dateFormat(product.date)) > 0 && (dateFormat(product.date)) <= 7 && <h5>Date added: {(dateFormat(product.date))} days ago</h5> } 
-                    { (dateFormat(product.date)) == 0 && <h5>Date added: Today</h5> } 
+                    { (dateFormat(product.date)) > 1 && (dateFormat(product.date)) <= 7 && <h5>Date added: {(dateFormat(product.date))} days ago</h5> }
+                    { (dateFormat(product.date)) === 1 && <h5>Date added: {(dateFormat(product.date))} day ago</h5> } 
+                    { (dateFormat(product.date)) === 0 && <h5>Date added: Today</h5> } 
+                    {() => setCounter(i++)}
                 </div>
             ))}
         </div>
